@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'first_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,19 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Praktikum Mobile Lanjut',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Praktikum Mobile Lanjut'),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
         ),
-        body: const Center(
-          child: Text(
-            'Hallo nama saya Ilham',
-            style: TextStyle(
-              fontSize: 24,
-            ),
-          ),
-        ),
+        useMaterial3: true,
       ),
+      home: const FirstWidget(),
     );
   }
 }
